@@ -1,7 +1,7 @@
 .row
   .col-sm-8.col-sm-offset-2
     .text-center
-      %h2 Qiitan にログイン
+      %h2 QiitanDebug にログイン
     = simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-section' }) do |f|
       .form-group
         = f.input :email, autofocus: true, autocomplete: :email, required: false
@@ -12,5 +12,5 @@
           = f.label :remember_me, class: 'form-check-label' do
             = resource.class.human_attribute_name('remember_me')
       .form-group
-        = f.submit 'Qiitan にログイン', class: 'btn btn-primary btn-block btn-lg'
+        = f.submit 'QiitanDebug にログイン', class: 'btn btn-primary btn-block btn-lg'
       = render 'devise/shared/links'

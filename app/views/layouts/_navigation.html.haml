@@ -6,7 +6,7 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to 'Qiitan', root_path, class: 'navbar-brand'
+      = link_to 'QiitanDebug', root_path, class: 'navbar-brand'
     - if user_signed_in?
       .nav.navbar-nav.navbar-left
         - @q ||= Article.none.search(params[:q])
