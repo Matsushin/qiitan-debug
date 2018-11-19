@@ -19,6 +19,11 @@ if User.count.zero?
     user2.skip_confirmation!
     user2.save!
 
+    50.times do |count|
+      number = count + 1
+      user1.articles.create!(title: "記事タイトル#{number}", body: "#{number}番目の記事投稿です。")
+    end
+
     body = <<~EOS
       # はじめに
       1対多で関連するデータを1つのフォーム画面にしたい時、 みなさんはどのようなコードを書きますか？
@@ -57,8 +62,9 @@ if User.count.zero?
       # 参考サイト
       [1対多の関連を持つオブジェクトを編集可能なフォーム](http://rails.densan-labs.net/form/relation_register_form.html)
     EOS
-    article1 = Article.create!(user: user1, title: 'nested_form はもう古い！？ Cocoon で作る1対多のフォーム', body: body)
-    article2 = Article.create!(user: user2, title: '記事タイトル', body: 'ここに本文が入ります')
+
+    article1 = user1.articles.create!(title: 'nested_form はもう古い！？ Cocoon で作る1対多のフォーム', body: body)
+    article2 = user2.articles.create!(title: '記事タイトル', body: 'ここに本文が入ります')
     comment1 = article1.comments.create!(user: user2, body: '参考になりました！')
     comment1.notifications.create!(user: user1)
     comment2 = article1.comments.create!(user: user1, body: '良かったです！！')
