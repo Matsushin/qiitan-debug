@@ -4,9 +4,9 @@ class UsersController < ApplicationController
 
   def show
     @articles = if liked_request?
-                  Article.where(id: @user.likes.select(:article_id)).includes(:user).order(created_at: :desc).page(params[:page])
+                  Article.where(id: @user.likes.select(:like_id)).includes(:user).order(created_at: :desc, id: :desc).page(params[:page])
                 else
-                  @user.articles.order(created_at: :desc).page(params[:page])
+                  @user.articles.order(created_at: :desc, id: :desc).page(params[:page])
                 end
   end
 
