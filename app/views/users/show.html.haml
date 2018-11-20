@@ -10,7 +10,7 @@
         %br
         Items
       .col-xs-6.user__activity-stat
-        %span.user__activity-stat_count= Like.count
+        %span.user__activity-stat_count= Like.where(article: @user.articles).count
         %br
         Contributtion
     %ul.nav.nav-tabs
