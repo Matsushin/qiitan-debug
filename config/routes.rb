@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :articles, only: %i[show new create edit update] do
     collection do
-      post :preview
+      post :view
     end
     resources :stocks, only: %i[create destroy], format: :js
     resources :likes, only: %i[create destroy], format: :js
