@@ -63,7 +63,7 @@ bundle exec rake db:seed # 初期データ投入
 bundle exec rails s
 ```
 
-`http://localhost:8000` にアクセスしてログイン画面が表示されればOK。
+`http://localhost:3000` にアクセスしてログイン画面が表示されればOK。
 
 
 ## 備考
