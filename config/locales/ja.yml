@@ -1,6 +1,8 @@
 ja:
   activerecord:
     attributes:
+      user:
+        locale: 言語設定
       article:
         title: タイトル
         body: 本文
@@ -10,6 +12,11 @@ ja:
         restrict_dependent_destroy:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
+  enumerize:
+    user:
+      locale:
+        ja: 日本語
+        en: English
   date:
     abbr_day_names:
     - 日

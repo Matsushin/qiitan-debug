@@ -7,7 +7,7 @@ $(function() {
             var $unread = $('.js-notification-unread');
             if ($unread.data('unread')) {
                 $.ajax({
-                    type: 'PATCH',
+                    type: 'POST',
                     url: $unread.data('url'),
                     dataType: 'script'
                 })
