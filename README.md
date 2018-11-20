@@ -51,16 +51,16 @@ bundle install --path=vendor/bundle
 - `config/dattabase.yml` のDB接続情報をあなたのローカル環境に合わせてください
 
 ```
-bundle exec rake db:create # DB作成
-bundle exec rake db:migrate # テーブル作成
-bundle exec rake db:seed # 初期データ投入
+rails db:create # DB作成
+rails db:migrate # テーブル作成
+rails db:seed # 初期データ投入
 ```
 
 ### 画面確認
 
 サーバ起動
 ```
-bundle exec rails s
+rails s
 ```
 
 `http://localhost:3000` にアクセスしてログイン画面が表示されればOK。
