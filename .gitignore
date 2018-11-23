@@ -10,6 +10,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
+/db/*.sqlite3
 !/log/.keep
 !/tmp/.keep
 /public/uploads/tmp
