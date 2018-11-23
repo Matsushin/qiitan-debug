@@ -34,12 +34,15 @@ Rails学習用アプリ。
 - mysql
 
 ### セットアップ
-- Matsushin/QiitanDebugリポジトリをあなたのリポジトリにforkしてください
+- Matsushin/QiitanDebugリポジトリをあなたのリポジトリに[fork](https://qiita.com/YumaInaura/items/acff806290c8953d3185)してください
   - 自分で答え合わせもする場合はcloneでも可
+
 ```
-git clone git@github.com:[あなたのユーザ名]/qiitan-debug.git
+git clone git@github.com:あなたのユーザ名/qiitan-debug.git
 cd qiitan-debug
 ```
+
+- 注) GitHubにSSH鍵が登録されておらずクローンに失敗する場合は[こちら](https://qiita.com/knife0125/items/50b80ad45d21ddec61a9)を参考に登録してください
 
 ### 各種gemインストール
 
@@ -47,14 +50,26 @@ cd qiitan-debug
 bundle install --path=vendor/bundle
 ```
 
+- 注) ローカル環境にRuby 2.5.1が入っておらずinstallできない場合は[こちら](https://qiita.com/akisanpony/items/ae9d8eed72945de98285)を参考にバージョンアップしてください
+
 ### データ準備
-- `config/dattabase.yml` のDB接続情報をあなたのローカル環境に合わせてください
 
 ```
 rails db:create # DB作成
 rails db:migrate # テーブル作成
 rails db:seed # 初期データ投入
 ```
+
+データが投入されたか確認
+
+```
+rails c # コンソール開始
+irb(main):001:0> User.count
+   (0.6ms)  SELECT COUNT(*) FROM "users"
+=> 2
+```
+
+上記のように2件データがあることを確認できればOK。
 
 ### 画面確認
 
