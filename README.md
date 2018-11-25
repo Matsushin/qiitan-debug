@@ -17,21 +17,22 @@ Rails学習用アプリ。
 - デバッグ開始
 - バグ/エラーを見つけたらシートに記入していく
 - バグ/エラーの修正ができたらシートに記入していく
-  - 修正はmasterブランチ以外で行う
   - 1つのバグ/エラーの対応毎にコミットを行う
 - 制限時間になったら答えを確認して点数をつける
   - 採点者がいる場合はPRを作成し、チェックしてもらう
 
 ## ルール
 - 制限時間は90分とする。
-- バグを見つければ1点、修正ができれば3点。最高48点とする。
-- 回答はこちらの[シート](#)、[PR](#)を確認する
+- バグ/エラーを見つければ1点、修正ができれば2点、回答通りの修正ができればさらに1点
+  - バグ/エラーは12個あるので最高48点とする。
+- 回答はこちらの[シート](https://docs.google.com/spreadsheets/d/1A_K5UkYKSdcXzCTE7Ti7GrwlUME39RXiyXW4Q9BeIG0/edit?usp=sharing)、[PR](https://github.com/Matsushin/qiitan-debug/pull/2)を確認する
+- 試験中に[Qiitan](http://qiitan-prd.herokuapp.com/)は動作確認として操作してもOK。コードを見るのは禁止。
 
 ## 環境構築手順
 ### 環境
 - ruby v2.5.1
 - rails v5.1.6
-- mysql
+- sqlite
 
 ### セットアップ
 - Matsushin/QiitanDebugリポジトリをあなたのリポジトリに[fork](https://qiita.com/YumaInaura/items/acff806290c8953d3185)してください
