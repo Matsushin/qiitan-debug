@@ -10,7 +10,7 @@ class StocksController < ApplicationController
   end
   
   def create
-    @stocks = current_user.stocks.build(article: @article)
+    @stock = current_user.stocks.build(article: @article)
     if @stock.save
       render :save
     else
